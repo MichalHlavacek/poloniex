@@ -67,12 +67,12 @@ module Poloniex
     post 'returnTradeHistory', currencyPair: currency_pair, start: start, :end => end_time
   end
 
-  def self.buy( currency_pair, rate, amount )
-    post 'buy', currencyPair: currency_pair, rate: rate, amount: amount
+  def self.buy( options )
+    post 'buy', options
   end
 
-  def self.sell( currency_pair, rate, amount )
-    post 'sell', currencyPair: currency_pair, rate: rate, amount: amount
+  def self.sell( options )
+    post 'sell', options
   end
 
   def self.cancel_order( currency_pair, order_number )
